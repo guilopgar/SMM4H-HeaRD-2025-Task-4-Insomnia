@@ -2,7 +2,7 @@
 
 ## MIMIC-III Notes Processing Script
 
-This Python script is designed to merge annotation data with patient notes and prescription data from the MIMIC-III clinical database. The script takes annotation data, merges it with relevant clinical data from MIMIC-III, and outputs a combined corpus with additional demographic and prescription information.
+This Python script is designed to merge annotation data with patient notes and prescription data from the MIMIC-III clinical database. The script takes annotation data, merges it with relevant clinical data from MIMIC-III, and outputs a combined corpus with additional demographic and prescription information..
 
 ### Requirements
 
