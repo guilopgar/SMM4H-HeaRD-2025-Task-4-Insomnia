@@ -1,0 +1,22 @@
+note_id,Insomnia,Def 1,Def 1 Text,Def 2,Def 2 Text,Rule A,Rule B,Rule B Text,Rule C,Rule C Text
+10997,no,no,[],no,[],no,no,[],no,[]
+11339,no,no,[],no,[],no,no,[],no,[]
+11834,yes,no,[],yes,"['has been very tired, sleeping a lot']",no,no,[],yes,['Lorazepam']
+1261107,yes,yes,['Unable to sleep'],no,[],no,no,[],yes,"['Diphenhydramine', 'benadryl']"
+1261284,yes,yes,"['he had trouble sleeping', 'He is extremely tired (has not slept in over 3 days) and just wants to sleep.']",yes,['He is extremely tired (has not slept in over 3 days) and just wants to sleep.'],yes,yes,['Zolpidem'],yes,['Gabapentin']
+1262534,yes,yes,['difficulty sleeping'],no,[],no,yes,"['Zolpidem', 'ambien']",no,[]
+1265602,yes,yes,"['Awake most of the night, very restless @ times', 'unable to sleep']",yes,['being very tired'],yes,no,[],yes,"['Lorazepam', 'Ativan']"
+1267520,yes,yes,['unable to sleep'],yes,['extremely fatigued this morning'],yes,no,[],no,[]
+1270387,no,no,[],yes,['LETHARGIC'],no,no,[],no,[]
+1272114,yes,yes,['INSOMNIA'],no,[],no,no,[],yes,"['traZODONE', 'Alprazolam', 'TRAZODONE', 'ALPRAZOLAM']"
+1273005,yes,yes,['complained of inability to sleep'],yes,['increased aggitation'],yes,no,[],yes,"['Diazepam', 'valium', 'valium', 'valium', 'valium']"
+1273205,yes,yes,['having difficulty falling asleep'],no,[],no,no,[],yes,"['Lorazepam', 'ativan']"
+1275280,yes,no,[],yes,"['PT RESTLESS, ANGRY AND UNCOOPERATIVE AT TIMES.']",no,no,[],yes,['Lorazepam']
+1276661,yes,yes,['trouble sleeping'],no,[],no,yes,['Zolpidem'],yes,"['Olanzapine', 'traZODONE', 'Lorazepam', 'Diphenhydramine', 'olanzapine', 'trazadone']"
+1277043,yes,yes,['c/o inability to sleep requested sleeping aide'],no,[],no,no,[],yes,"['Lorazepam', 'traZODONE', 'Triazidone', 'Ativan']"
+1277813,yes,no,[],yes,['pt agitated at times'],no,no,[],yes,"['Diazepam', 'Lorazepam', 'lorazepam', 'lorazepam', 'diazepam']"
+1280112,yes,yes,['INSOMNIA'],yes,"['LETHARGIC,', 'FLAT AFFECT, ADMITTED TO FEELING DOWN']",yes,yes,['Zolpidem'],yes,"['Lorazepam', 'Diphenhydramine', 'Olanzapine', 'traZODONE']"
+1281503,yes,yes,['PATIENT RESTLESS AND UNABLE TO SLEEP'],no,[],no,no,[],yes,"['Lorazepam', 'ATIVAN']"
+1287915,yes,yes,['Pt was up most of night having difficulty falling asleep'],yes,['Most recently more lethargic'],yes,yes,['Zolpidem'],yes,"['Alprazolam', 'Lorazepam', 'Ativan', 'Xanax']"
+1288130,yes,yes,['HAVING TROUBLE SLEEPING'],no,[],no,no,[],yes,"['Diphenhydramine', 'BENADRYL']"
+1289495,yes,yes,['unable to sleep last night'],yes,"['Pt generally lethargic today,']",yes,no,[],yes,"['Lorazepam', 'Gabapentin', 'Ativan']"
