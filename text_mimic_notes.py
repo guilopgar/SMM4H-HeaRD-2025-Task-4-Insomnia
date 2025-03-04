@@ -26,21 +26,22 @@ def age_to_decade(age):
     return decades[index]
 
 
-def main(ann_path, mimic_path, output_path):
+def main(note_ids_path, mimic_path, output_path):
     """
-    Main function to process annotation and MIMIC-III notes into a combined dataset.
+    Main function to process note IDs and MIMIC-III notes into a combined dataset.
     
     Args:
-        ann_path (str): Path to the annotations CSV file.
+        note_ids_path (str): Path to the text file containing note IDs.
         mimic_path (str): Directory path containing MIMIC-III CSV files.
         output_path (str): Output path for the processed corpus CSV file.
     """
     # Data loading
-    df_ann = pd.read_csv(
-        ann_path,
-        sep=','
-    )
-    df_ann.index = df_ann["note_id"].values
+    arr_note_ids = []
+    with open(note_ids_path, "r") as file:
+        for line in file:
+            line = line.strip()
+            if line:
+                arr_note_ids.append(int(line))
 
     df_mimic_note = pd.read_csv(
         os.path.join(mimic_path, 'NOTEEVENTS.csv.gz'),
@@ -59,7 +60,8 @@ def main(ann_path, mimic_path, output_path):
     )
 
     # Tables mapping
-    df_data = df_ann[["note_id"]].copy()
+    df_data = pd.DataFrame({"note_id": arr_note_ids})
+    df_data.index = df_data["note_id"].values
 
     df_data["subject_id"] = df_mimic_note.loc[df_data.index, "SUBJECT_ID"]
     df_data["hadm_id"] = df_mimic_note.loc[df_data.index, "HADM_ID"]
@@ -120,21 +122,20 @@ def main(ann_path, mimic_path, output_path):
         axis=1
     )
     df_data["text"] = df_data.apply(lambda row: f"{row['text_pref']}\n{row['text_mimic']}", axis=1)
-    df_ann["text"] = df_data.loc[df_ann.index.values, "text"].values
-
+    
     # Save data
-    df_ann.to_csv(output_path, sep=',', index=False)
+    df_data.loc[arr_note_ids, ["note_id", "text"]].to_csv(output_path, sep=',', index=False)
 
 
 if __name__ == "__main__":
     # Initialize parser
-    parser = argparse.ArgumentParser(description="Add text from MIMIC-III notes to annotated corpus.")
+    parser = argparse.ArgumentParser(description="Process and combine note IDs with MIMIC-III notes into a single dataset.")
     parser.add_argument(
-        "-a",
-        "--ann_path",
+        "-n",
+        "--note_ids_path",
         type=str,
         required=True,
-        help="Path to the annotations CSV file"
+        help="Path to the text file containing note IDs"
     )
     parser.add_argument(
         "-m",
@@ -156,7 +157,7 @@ if __name__ == "__main__":
 
     # Run script
     main(
-        ann_path=args.ann_path,
+        note_ids_path=args.note_ids_path,
         mimic_path=args.mimic_path,
         output_path=args.output_path
     )
