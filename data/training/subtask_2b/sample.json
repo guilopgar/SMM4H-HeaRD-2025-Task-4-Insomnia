@@ -1,1 +1,510 @@
-{"10997": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "no", "text": []}}, "11339": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "no", "text": []}}, "11834": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "yes", "text": ["has been very tired, sleeping a lot"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam"]}}, "1261107": {"Definition 1": {"label": "yes", "text": ["Unable to sleep"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Diphenhydramine", "benadryl"]}}, "1261284": {"Definition 1": {"label": "yes", "text": ["he had trouble sleeping", "He is extremely tired (has not slept in over 3 days) and just wants to sleep"]}, "Definition 2": {"label": "yes", "text": ["He is extremely tired (has not slept in over 3 days) and just wants to sleep"]}, "Rule B": {"label": "yes", "text": ["Zolpidem"]}, "Rule C": {"label": "yes", "text": ["Gabapentin"]}}, "1262534": {"Definition 1": {"label": "yes", "text": ["difficulty sleeping"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "yes", "text": ["Zolpidem", "ambien"]}, "Rule C": {"label": "no", "text": []}}, "1265602": {"Definition 1": {"label": "yes", "text": ["Awake most of the night, very restless @ times", "unable to sleep"]}, "Definition 2": {"label": "yes", "text": ["being very tired"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam", "Ativan"]}}, "1267520": {"Definition 1": {"label": "yes", "text": ["unable to sleep"]}, "Definition 2": {"label": "yes", "text": ["extremely fatigued this morning"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "no", "text": []}}, "1270387": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "yes", "text": ["LETHARGIC"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "no", "text": []}}, "1272114": {"Definition 1": {"label": "yes", "text": ["INSOMNIA"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["traZODONE", "Alprazolam", "TRAZODONE", "ALPRAZOLAM"]}}, "1273005": {"Definition 1": {"label": "yes", "text": ["complained of inability to sleep"]}, "Definition 2": {"label": "yes", "text": ["increased aggitation"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Diazepam", "valium", "valium", "valium", "valium"]}}, "1273205": {"Definition 1": {"label": "yes", "text": ["having difficulty falling asleep"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam", "ativan"]}}, "1275280": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "yes", "text": ["PT RESTLESS, ANGRY AND UNCOOPERATIVE AT TIMES"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam"]}}, "1276661": {"Definition 1": {"label": "yes", "text": ["trouble sleeping"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "yes", "text": ["Zolpidem"]}, "Rule C": {"label": "yes", "text": ["Olanzapine", "traZODONE", "Lorazepam", "Diphenhydramine", "olanzapine", "trazadone"]}}, "1277043": {"Definition 1": {"label": "yes", "text": ["c/o inability to sleep requested sleeping aide"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam", "traZODONE", "Triazidone", "Ativan"]}}, "1277813": {"Definition 1": {"label": "no", "text": []}, "Definition 2": {"label": "yes", "text": ["pt agitated at times"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Diazepam", "Lorazepam", "lorazepam", "lorazepam", "diazepam"]}}, "1280112": {"Definition 1": {"label": "yes", "text": ["INSOMNIA"]}, "Definition 2": {"label": "yes", "text": ["LETHARGIC", "FLAT AFFECT, ADMITTED TO FEELING DOWN"]}, "Rule B": {"label": "yes", "text": ["Zolpidem"]}, "Rule C": {"label": "yes", "text": ["Lorazepam", "Diphenhydramine", "Olanzapine", "traZODONE"]}}, "1281503": {"Definition 1": {"label": "yes", "text": ["PATIENT RESTLESS AND UNABLE TO SLEEP"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam", "ATIVAN"]}}, "1287915": {"Definition 1": {"label": "yes", "text": ["Pt was up most of night having difficulty falling asleep"]}, "Definition 2": {"label": "yes", "text": ["Most recently more lethargic"]}, "Rule B": {"label": "yes", "text": ["Zolpidem"]}, "Rule C": {"label": "yes", "text": ["Alprazolam", "Lorazepam", "Ativan", "Xanax"]}}, "1288130": {"Definition 1": {"label": "yes", "text": ["HAVING TROUBLE SLEEPING"]}, "Definition 2": {"label": "no", "text": []}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Diphenhydramine", "BENADRYL"]}}, "1289495": {"Definition 1": {"label": "yes", "text": ["unable to sleep last night"]}, "Definition 2": {"label": "yes", "text": ["Pt generally lethargic today"]}, "Rule B": {"label": "no", "text": []}, "Rule C": {"label": "yes", "text": ["Lorazepam", "Gabapentin", "Ativan"]}}}
+{
+    "10997": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "no",
+            "text": []
+        }
+    },
+    "11339": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "no",
+            "text": []
+        }
+    },
+    "11834": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "has been very tired, sleeping a lot"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam"
+            ]
+        }
+    },
+    "1261107": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "Unable to sleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Diphenhydramine",
+                "benadryl"
+            ]
+        }
+    },
+    "1261284": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "he had trouble sleeping",
+                "He is extremely tired (has not slept in over 3 days) and just wants to sleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "He is extremely tired (has not slept in over 3 days) and just wants to sleep"
+            ]
+        },
+        "Rule B": {
+            "label": "yes",
+            "text": [
+                "Zolpidem"
+            ]
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Gabapentin"
+            ]
+        }
+    },
+    "1262534": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "difficulty sleeping"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "yes",
+            "text": [
+                "Zolpidem",
+                "ambien"
+            ]
+        },
+        "Rule C": {
+            "label": "no",
+            "text": []
+        }
+    },
+    "1265602": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "Awake most of the night, very restless @ times",
+                "unable to sleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "being very tired"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "Ativan"
+            ]
+        }
+    },
+    "1267520": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "unable to sleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "extremely fatigued this morning"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "no",
+            "text": []
+        }
+    },
+    "1270387": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "LETHARGIC"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "no",
+            "text": []
+        }
+    },
+    "1272114": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "INSOMNIA"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "traZODONE",
+                "Alprazolam",
+                "TRAZODONE",
+                "ALPRAZOLAM"
+            ]
+        }
+    },
+    "1273005": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "complained of inability to sleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "increased aggitation"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Diazepam",
+                "valium",
+                "valium",
+                "valium",
+                "valium"
+            ]
+        }
+    },
+    "1273205": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "having difficulty falling asleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "ativan"
+            ]
+        }
+    },
+    "1275280": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "PT RESTLESS, ANGRY AND UNCOOPERATIVE AT TIMES"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam"
+            ]
+        }
+    },
+    "1276661": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "trouble sleeping"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "yes",
+            "text": [
+                "Zolpidem"
+            ]
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Olanzapine",
+                "traZODONE",
+                "Lorazepam",
+                "Diphenhydramine",
+                "olanzapine",
+                "trazadone"
+            ]
+        }
+    },
+    "1277043": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "c/o inability to sleep requested sleeping aide"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "traZODONE",
+                "Triazidone",
+                "Ativan"
+            ]
+        }
+    },
+    "1277813": {
+        "Definition 1": {
+            "label": "no",
+            "text": []
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "pt agitated at times"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Diazepam",
+                "Lorazepam",
+                "lorazepam",
+                "lorazepam",
+                "diazepam"
+            ]
+        }
+    },
+    "1280112": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "INSOMNIA"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "LETHARGIC",
+                "FLAT AFFECT, ADMITTED TO FEELING DOWN"
+            ]
+        },
+        "Rule B": {
+            "label": "yes",
+            "text": [
+                "Zolpidem"
+            ]
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "Diphenhydramine",
+                "Olanzapine",
+                "traZODONE"
+            ]
+        }
+    },
+    "1281503": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "PATIENT RESTLESS AND UNABLE TO SLEEP"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "ATIVAN"
+            ]
+        }
+    },
+    "1287915": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "Pt was up most of night having difficulty falling asleep"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "Most recently more lethargic"
+            ]
+        },
+        "Rule B": {
+            "label": "yes",
+            "text": [
+                "Zolpidem"
+            ]
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Alprazolam",
+                "Lorazepam",
+                "Ativan",
+                "Xanax"
+            ]
+        }
+    },
+    "1288130": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "HAVING TROUBLE SLEEPING"
+            ]
+        },
+        "Definition 2": {
+            "label": "no",
+            "text": []
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Diphenhydramine",
+                "BENADRYL"
+            ]
+        }
+    },
+    "1289495": {
+        "Definition 1": {
+            "label": "yes",
+            "text": [
+                "unable to sleep last night"
+            ]
+        },
+        "Definition 2": {
+            "label": "yes",
+            "text": [
+                "Pt generally lethargic today"
+            ]
+        },
+        "Rule B": {
+            "label": "no",
+            "text": []
+        },
+        "Rule C": {
+            "label": "yes",
+            "text": [
+                "Lorazepam",
+                "Gabapentin",
+                "Ativan"
+            ]
+        }
+    }
+}
