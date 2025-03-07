@@ -1,5 +1,20 @@
 # SMM4H-HeaRD @AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
 
+## Task Overview
+
+This text classification shared task is divided into three distinct subtasks:
+
+- **Subtask 1: Binary Text Classification**
+Participants are given a clinical note and must determine whether the patient described in the note is likely to suffer from insomnia ("yes" or "no").
+
+- **Subtask 2A: Multi-label Text Classification**
+Participants evaluate each clinical note against the defined Insomnia rules: Definition 1, Definition 2, Rule A, Rule B, and Rule C. They must predict whether each item is satisfied based on the information in the note ("yes" or "no").
+
+- **Subtask 2B: Evidence-Based Classification**
+This task extends Subtask 2A by requiring not only classification of each item but also the identification and extraction of text evidence from the clinical note that supports each classification. For items Definition 1, Definition 2, Rule B, and Rule C, participants must provide a label ("yes" or "no") and include specific text spans from the note that justify the classification. This subtask focuses on promoting transparency and explainability in NLP models by requiring justification for each decision made.
+
+For each subtask, ground truth annotations are provided in JSON format. Participants are required to submit their system outputs following the same format as the ground truth annotations provided by the organizers.
+
 ## Evaluation
 
 ## Data
