@@ -1,10 +1,12 @@
-# SMM4H-HeaRD-2025-Task-4-Insomnia
+# SMM4H-HeaRD @AAAI-ICWSM-2025 Shared Task on Detection of Insomnia in Clinical Notes
+
+## Evaluation
 
 ## Data
 
 This shared task utilizes a corpus of clinical notes derived from the MIMIC-III Database. The clinical notes have been augmented with additional structured patient information, specifically sex, age, and the medications prescribed during their hospital stay.
 
-Participants are required to complete necessary training and sign a data usage agreement to access the [MIMIC-III Clinical Database (v1.4)](https://physionet.org/content/mimiciii/1.4/). Once access is granted, participants must run the `text_mimic_notes.py` script to retrieve clinical notes and associated patient information using the provided note IDs. This process builds the corpus utilized in this shared task, as detailed in the instructions provided below.
+Participants are required to complete necessary training and sign a data usage agreement to access the [MIMIC-III Clinical Database (v1.4)](https://physionet.org/content/mimiciii/1.4/). After gaining access and downloading the files, participants must run the `text_mimic_notes.py` script to retrieve clinical notes and associated patient information using the provided note IDs. This process builds the corpus utilized in this shared task, as detailed in the instructions provided below.
 
 ### MIMIC-III Notes Processing
 
@@ -20,7 +22,7 @@ The `text_mimic_notes.py` Python script is designed to retrieve clinical notes a
 
 The script requires three command-line arguments:
 - `--note_ids_path`: The file path to the text file containing the note IDs.
-- `--mimic_path`: The directory path containing the MIMIC-III v1.4 CSV files (`NOTEEVENTS.csv.gz`, `PRESCRIPTIONS.csv.gz`, `PATIENTS.csv.gz`).
+- `--mimic_path`: The directory path containing the MIMIC-III v1.4 CSV files (`NOTEEVENTS.csv.gz`, `PRESCRIPTIONS.csv.gz` and `PATIENTS.csv.gz`).
 - `--output_path`: The file path where the processed corpus CSV will be saved. This output CSV file will have two columns: the note IDs and the textual data retrieved from MIMIC-III.
 
 #### Command Syntax
