@@ -1,6 +1,6 @@
 # SMM4H-HeaRD @AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
 
-## Task Overview
+## Task Description
 
 This text classification shared task is divided into three distinct subtasks:
 
