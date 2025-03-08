@@ -1,5 +1,9 @@
 # SMM4H-HeaRD @AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
 
+This new shared task aims to the development of automatic systems for identify patients potentially suffering from insomnia using electronic health records (EHRs). It is structured as a text classification challenge requiring participants to analyze a clinical note to determine if a patient is likely to have insomnia. We have developed a comprehensive set of rules aimed at facilitating the identification of patients likely suffering from insomnia based on EHRs. These rules encompass both direct and indirect symptoms of insomnia and include information about hypnotic medications typically prescribed for its management.
+
+For this task, we have curated an annotated corpus of 210 clinical notes from the MIMIC III database. Each note is annotated with a binary label indicating the patient’s overall insomnia status ("yes" or "no"), and at the rule-level to indicate the satisfaction of each rule based on the note’s content. Additionally, to promote explainability among participating NLP systems, we provide textual evidence from the clinical notes supporting each annotation, ensuring that system outputs can be effectively justified.
+
 ## Task Description
 
 This text classification shared task is divided into three distinct subtasks:
