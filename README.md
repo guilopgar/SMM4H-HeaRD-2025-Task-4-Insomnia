@@ -18,13 +18,13 @@ For each subtask, ground truth annotations are provided in JSON format. Particip
 ## Evaluation
 
 - **Subtask 1: Binary Text Classification**  
-The performance in this subtask will be evaluated using the F1 score. The "yes" label will be treated as the positive class.
+The performance in this subtask is evaluated using the F1 score. The "yes" label is treated as the positive class.
 
 - **Subtask 2A: Multi-label Text Classification**  
-The micro-average F1 score will serve as the primary evaluation metric. The "yes" label will be treated as the positive class for each item in the Insomnia rules. 
+The micro-average F1 score serves as the primary evaluation metric. The "yes" label is considered the positive class for each item in the Insomnia rules. 
 
 - **Subtask 2B: Evidence-Based Classification**  
-The alignment of text spans provided by participants with the reference spans from the clinical notes will be assessed using BLEU and ROUGE metrics.
+The alignment of text spans provided by participants with the reference spans from the clinical notes is assessed using BLEU and ROUGE metrics.
 
 ## Data
 
