@@ -1,10 +1,18 @@
-# SMM4H-HeaRD @AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
+# SMM4H-HeaRD @ AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
 
-This new shared task aims to the development of automatic systems for identify patients potentially suffering from insomnia using electronic health records (EHRs). It is structured as a text classification challenge requiring participants to analyze a clinical note to determine if a patient is likely to have insomnia. We have developed a comprehensive set of rules aimed at facilitating the identification of patients likely suffering from insomnia based on EHRs. These rules encompass both direct and indirect symptoms of insomnia and include information about hypnotic medications typically prescribed for its management.
+## Overview
 
-For this task, we have curated an annotated corpus of 210 clinical notes from the MIMIC III database. Each note is annotated with a binary label indicating the patient’s overall insomnia status ("yes" or "no"), and at the rule-level to indicate the satisfaction of each rule based on the note’s content. Additionally, to promote explainability among participating NLP systems, we provide textual evidence from the clinical notes supporting each annotation, ensuring that system outputs can be effectively justified.
+We invite researchers and practitioners to participate in the **Shared Task 4: Detection of Insomnia in Clinical Notes** at the [**SMM4H-HeaRD @ AAAI-ICWSM-2025**](https://healthlanguageprocessing.org/smm4h-2025/). This task focuses on developing automatic systems that can identify patients potentially suffering from insomnia using electronic health records (EHRs). Designed as a text classification challenge, this task requires participants to analyze a clinical note to determine if a patient is likely to have insomnia.
 
-## Task Description
+## Task Details
+
+We have developed a comprehensive set of rules (*Insomnia rules*) to facilitate the identification of patients potentially suffering from insomnia. These rules incorporate both direct and indirect symptoms of insomnia and include information about commonly prescribed hypnotic medications. For this task, we have curated an annotated corpus of 210 clinical notes from the MIMIC III database, adhering to the Insomnia rules during the annotation process. Each note is annotated with a binary label indicating the patient’s overall insomnia status ("yes" or "no"), and at the rule-level to indicate the satisfaction of each rule based on the note’s content. Additionally, to promote explainability among participating NLP systems, we provide textual evidence from the clinical notes supporting each annotation, ensuring that system outputs can be effectively justified.
+
+## Registration and Resources
+
+To join this shared task, please register for the **Task 4 - Detection of insomnia in clinical notes** through the [SMM4H-HeaRD 2025 Shared Task Registration Form](https://docs.google.com/forms/d/e/1FAIpQLScOdaY58DZQ_2aw_rISJut3GfhmvIIibqgqgzntSE0i4s8ujA/viewform). Upon registration, participants will gain access to the full training, validation, and test datasets.
+
+## Subtasks Description
 
 This text classification shared task is divided into three distinct subtasks:
 
@@ -17,8 +25,6 @@ Participants evaluate each clinical note against the defined Insomnia rules: Def
 - **Subtask 2B: Evidence-Based Classification**  
 This task extends Subtask 2A by requiring not only classification of each item but also the identification and extraction of text evidence from the clinical note that supports each classification. For items Definition 1, Definition 2, Rule B, and Rule C, participants must provide a label ("yes" or "no") and include specific text spans from the note that justify the classification. This subtask focuses on promoting transparency and explainability in NLP models by requiring justification for each decision made.
 
-For each subtask, ground truth annotations are provided in JSON format. Participants are required to submit their system outputs following the same format as the ground truth annotations provided by the organizers.
-
 ## Evaluation
 
 - **Subtask 1: Binary Text Classification**  
@@ -30,11 +36,15 @@ The micro-average F1 score serves as the primary evaluation metric. The "yes" la
 - **Subtask 2B: Evidence-Based Classification**  
 The alignment of text spans provided by participants with the reference spans from the clinical notes is assessed using BLEU and ROUGE metrics.
 
-## Data
+## Annotations
+
+For each subtask, ground truth annotations are provided in JSON format. Participants are required to submit their system outputs following the same format as the ground truth annotations provided by the organizers. A sample of the training set annotations is available at [`data/training`](data/training). Additionally, the complete set of Insomnia rules utilized for annotating the corpus can be found at [`resources/Insomnia_Rules.md`](resources/Insomnia_Rules.md).
+
+## Corpus
 
 This shared task utilizes a corpus of clinical notes derived from the MIMIC-III Database. The clinical notes have been augmented with additional structured patient information, specifically sex, age, and the medications prescribed during their hospital stay.
 
-Participants are required to complete necessary training and sign a data usage agreement to access the [MIMIC-III Clinical Database (v1.4)](https://physionet.org/content/mimiciii/1.4/). After gaining access and downloading the files, participants must run the `text_mimic_notes.py` script to retrieve clinical notes and associated patient information using the provided note IDs. This process builds the corpus utilized in this shared task, as detailed in the instructions provided below.
+Participants are required to complete necessary training and sign a data usage agreement to access the [MIMIC-III Clinical Database (v1.4)](https://physionet.org/content/mimiciii/1.4/). After gaining access and downloading the files, participants must run the [`text_mimic_notes.py`](text_mimic_notes.py) script to retrieve clinical notes and associated patient information using the provided note IDs. This process builds the corpus utilized in this shared task, as detailed in the instructions provided below.
 
 ### MIMIC-III Notes Processing
 
