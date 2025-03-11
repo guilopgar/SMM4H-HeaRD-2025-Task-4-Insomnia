@@ -1,7 +1,5 @@
 # SMM4H-HeaRD @ AAAI-ICWSM-2025 Shared Task 4: Detection of Insomnia in Clinical Notes
 
-## Overview
-
 We invite researchers and practitioners to participate in the **Shared Task 4: Detection of Insomnia in Clinical Notes** at the [**SMM4H-HeaRD @ AAAI-ICWSM-2025**](https://healthlanguageprocessing.org/smm4h-2025/). This task focuses on developing automatic systems that can identify patients potentially suffering from insomnia using electronic health records (EHRs). Designed as a text classification challenge, this task requires participants to analyze a clinical note to determine if a patient is likely to have insomnia.
 
 ## Task Details
