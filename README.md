@@ -23,6 +23,8 @@ Participants evaluate each clinical note against the defined Insomnia rules: Def
 - **Subtask 2B: Evidence-Based Classification**  
 This task extends Subtask 2A by requiring not only classification of each item but also the identification and extraction of text evidence from the clinical note that supports each classification. For items Definition 1, Definition 2, Rule B, and Rule C, participants must provide a label ("yes" or "no") and include specific text spans from the note that justify the classification. This subtask focuses on promoting transparency and explainability in NLP models by requiring justification for each decision made.
 
+*Note: Text spans are required only when the corresponding item is assigned a "yes" label. For items assigned a "no" label, participants should submit an empty list `[]` for the text spans, indicating no justification is required.
+
 ## Evaluation
 
 - **Subtask 1: Binary Text Classification**  
