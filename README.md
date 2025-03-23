@@ -66,7 +66,7 @@ The script requires three command-line arguments:
 The script is executed from the command line with the following syntax:
 
 ```bash
-python text_mimic_notes.py --ann_path [path_to_note_ids_txt] --mimic_path [path_to_mimic_csv_directory] --output_path [path_to_output_csv]
+python text_mimic_notes.py --note_ids_path [path_to_note_ids_txt] --mimic_path [path_to_mimic_csv_directory] --output_path [path_to_output_csv]
 ```
 
 #### Example Command
