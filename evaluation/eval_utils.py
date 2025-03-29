@@ -77,7 +77,7 @@ def subtask_2b_read_and_validate_json(json_path, labels, data_name='system predi
         data_name (str): Description of the data (either 'gold standard' or 'system predictions')
 
     Returns:
-        DataFrame: DataFrame with note IDs as indices and required labels as columns
+        dict: Dictionary with note IDs as keys and validated label and text data as values
 
     Raises:
         ValueError: If the JSON data is malformed or labels are incorrect
@@ -183,3 +183,55 @@ def compute_metrics(labels, preds, average='binary', target_names=[NEGATIVE_CLAS
             ), 4
         ),
     }
+
+
+def subtask_2b_compute_metrics(dict_gs, dict_pred, arr_labels, rouge_scorer):
+    """
+    Calculates the ROUGE-L score for the given gold standard and prediction dictionaries
+    based on the provided labels. This function is designed to evaluate text spans extracted
+    from clinical notes for subtask 2B which requires justification of classifications with text evidence.
+
+    Args:
+        dict_gs (dict): A dictionary containing the gold standard data with note IDs as keys and
+                        dictionaries of labels and their corresponding text evidence as values.
+        dict_pred (dict): A dictionary containing the prediction data in the same format as dict_gs.
+        arr_labels (list): A list of provided labels (str).
+        rouge_scorer (ROUGE Scorer object): An instantiated ROUGE scorer object used to compute ROUGE-L scores.
+
+    Returns:
+        float: The average ROUGE-L score across all provided labels and notes, providing a measure
+               of the similarity between the predicted text and the gold standard."
+    """
+    dict_results = {label: [] for label in arr_labels}
+    for note_id in dict_gs:
+        gs_note_id = dict_gs[note_id]
+        pred_note_id = dict_pred[note_id]
+
+        for label in arr_labels:
+            gs_text = ' '.join(gs_note_id[label]['text'])
+            pred_text = ' '.join(pred_note_id[label]['text'])
+
+            if gs_text or pred_text: # Calculate ROUGE-L only if there's text to compare
+                dict_results[label].append(
+                    rouge_scorer.score(
+                        target=gs_text,
+                        prediction=pred_text,
+                    )["rougeL"].fmeasure
+                )
+
+    # Calculate the average ROUGE-L score for each label
+    dict_results_avg = {label: None for label in arr_labels}
+    arr_results = []
+    for label in arr_labels:
+        if dict_results[label]:
+            avg_score = sum(dict_results[label]) / len(dict_results[label])
+            dict_results_avg[label] = round(avg_score, 4)
+            arr_results.append(avg_score)
+    print("Average ROUGE-L scores per label:")
+    print(dict_results_avg)
+
+    # Return the overall average ROUGE-L score
+    result = 0.0
+    if arr_results:
+        result = round(sum(arr_results) / len(arr_results), 4)
+    return result
