@@ -6,4 +6,4 @@
 - pandas library
 - json module
 - scikit-learn library
-- [rouge-score](https://pypi.org/project/rouge-score/) library
+- [rouge-score](https://pypi.org/project/rouge-score/)
