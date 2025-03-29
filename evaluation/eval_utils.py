@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.metrics import f1_score, precision_score, recall_score, classification_report
 
 
 # Define class mappings
@@ -136,10 +136,10 @@ def subtask_2b_read_and_validate_json(json_path, labels, data_name='system predi
                 'text': label_content['text'],
             }
 
-    return pd.DataFrame.from_dict(validated_data, orient='index')
+    return validated_data
 
 
-def compute_metrics(labels, preds, average='binary'):
+def compute_metrics(labels, preds, average='binary', target_names=[NEGATIVE_CLASS, POSITIVE_CLASS]):
     """
     Compute precision, recall, and F1-score for the given labels and predictions.
 
@@ -148,33 +148,38 @@ def compute_metrics(labels, preds, average='binary'):
         preds (Series): Predicted labels
         average (str): Type of averaging performed on the metrics depending on the task.
             Expected values are: 'binary' (Subtask 1) or 'micro' (Subtask 2A)
+        target_names (list): List of target names for classification report
 
     Returns:
         dict: Dictionary containing precision, recall, and F1-score
     """
+    print(classification_report(
+        y_true=labels,
+        y_pred=preds,
+        digits=4,
+        zero_division=0.0,
+        target_names=target_names
+    ))
     return {
         'Precision': round(
             precision_score(
                 y_true=labels,
                 y_pred=preds,
                 average=average
-            ) * 100,
-            2
+            ), 4
         ),
         'Recall': round(
             recall_score(
                 y_true=labels,
                 y_pred=preds,
                 average=average
-            ) * 100,
-            2
+            ), 4
         ),
         'F1-score': round(
             f1_score(
                 y_true=labels,
                 y_pred=preds,
                 average=average
-            ) * 100,
-            2
+            ), 4
         ),
     }

@@ -10,17 +10,18 @@ def main(gs_path, pred_path):
         gs_path (str): Path to the JSON file containing the Gold Standard annotations
         pred_path (str): Path to the JSON file containing the system predictions
     """
-
+    arr_labels = ['Definition 1', 'Definition 2', 'Rule A', 'Rule B', 'Rule C']
+    
     # Load data from JSON files
     df_gs = eval_utils.read_and_validate_json(
         json_path=gs_path,
         data_name='gold standard',
-        labels=['Definition 1', 'Definition 2', 'Rule A', 'Rule B', 'Rule C']
+        labels=arr_labels
     )
     df_pred = eval_utils.read_and_validate_json(
         json_path=pred_path,
         data_name='system predictions',
-        labels=['Definition 1', 'Definition 2', 'Rule A', 'Rule B', 'Rule C']
+        labels=arr_labels
     )
 
     # Check for matching note IDs between gold standard and predictions
@@ -33,8 +34,10 @@ def main(gs_path, pred_path):
     result = eval_utils.compute_metrics(
         labels=df_gs.values,
         preds=df_pred.loc[df_gs.index].values,
-        average='micro'
+        average='micro',
+        target_names=arr_labels
     )
+    print("Evaluation results for Subtask 2A:")
     print(result)
 
 

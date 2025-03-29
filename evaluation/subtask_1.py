@@ -33,8 +33,10 @@ def main(gs_path, pred_path):
     result = eval_utils.compute_metrics(
         labels=df_gs["Insomnia"].values,
         preds=df_pred.loc[df_gs.index, "Insomnia"].values,
-        average='binary'
+        average='binary',
+        target_names=[eval_utils.NEGATIVE_CLASS, eval_utils.POSITIVE_CLASS]
     )
+    print("Evaluation results for Subtask 1:")
     print(result)
 
 
