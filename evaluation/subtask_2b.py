@@ -40,7 +40,7 @@ def main(gs_path, pred_path):
         rouge_scorer=scorer
     )
     print("\nEvaluation results for Subtask 2B:")
-    print(f"Average ROUGE-L score across all labels: {result}")
+    print(f"Average ROUGE-L scores across all labels: {result}")
 
 
 if __name__ == "__main__":

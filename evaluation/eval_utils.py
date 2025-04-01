@@ -187,7 +187,7 @@ def compute_metrics(labels, preds, average='binary', target_names=[NEGATIVE_CLAS
 
 def subtask_2b_compute_metrics(dict_gs, dict_pred, arr_labels, rouge_scorer):
     """
-    Calculates the ROUGE-L score for the given gold standard and prediction dictionaries
+    Calculates the ROUGE-L scores for the given gold standard and prediction dictionaries
     based on the provided labels. This function is designed to evaluate text spans extracted
     from clinical notes for subtask 2B which requires justification of classifications with text evidence.
 
@@ -199,10 +199,16 @@ def subtask_2b_compute_metrics(dict_gs, dict_pred, arr_labels, rouge_scorer):
         rouge_scorer (ROUGE Scorer object): An instantiated ROUGE scorer object used to compute ROUGE-L scores.
 
     Returns:
-        float: The average ROUGE-L score across all provided labels and notes, providing a measure
+        dict: Dictionary containing the average ROUGE-L precision, recall, and F1 scores 
+               across all provided labels and notes, providing a measure 
                of the similarity between the predicted text and the gold standard."
     """
-    dict_results = {label: [] for label in arr_labels}
+    arr_metrics = ['Precision', 'Recall', 'F1-score']
+    dict_results = {
+        label: {
+            metric: [] for metric in arr_metrics
+        } for label in arr_labels
+    }
     for note_id in dict_gs:
         gs_note_id = dict_gs[note_id]
         pred_note_id = dict_pred[note_id]
@@ -211,27 +217,46 @@ def subtask_2b_compute_metrics(dict_gs, dict_pred, arr_labels, rouge_scorer):
             gs_text = ' '.join(gs_note_id[label]['text'])
             pred_text = ' '.join(pred_note_id[label]['text'])
 
-            if gs_text or pred_text: # Calculate ROUGE-L only if there's text to compare
-                dict_results[label].append(
-                    rouge_scorer.score(
-                        target=gs_text,
-                        prediction=pred_text,
-                    )["rougeL"].fmeasure
+            if gs_text or pred_text:  # Calculate ROUGE-L only if there's text to compare
+                score = rouge_scorer.score(
+                    target=gs_text,
+                    prediction=pred_text,
+                )["rougeL"]
+                dict_results[label]['Precision'].append(
+                    score.precision
+                )
+                dict_results[label]['Recall'].append(
+                    score.recall
+                )
+                dict_results[label]['F1-score'].append(
+                    score.fmeasure
                 )
 
-    # Calculate the average ROUGE-L score for each label
-    dict_results_avg = {label: None for label in arr_labels}
-    arr_results = []
+    # Calculate the average ROUGE-L scores for each label
+    dict_results_avg = {
+        label: {
+            metric: None for metric in arr_metrics
+        } for label in arr_labels
+    }
+    arr_results = {
+        metric: [] for metric in arr_metrics
+    }
     for label in arr_labels:
-        if dict_results[label]:
-            avg_score = sum(dict_results[label]) / len(dict_results[label])
-            dict_results_avg[label] = round(avg_score, 4)
-            arr_results.append(avg_score)
-    print("Average ROUGE-L scores per label:")
-    print(dict_results_avg)
+        for metric in arr_metrics:
+            if dict_results[label][metric]:
+                avg_score = sum(dict_results[label][metric]) / len(dict_results[label][metric])
+                dict_results_avg[label][metric] = round(avg_score, 4)
+                arr_results[metric].append(avg_score)
 
-    # Return the overall average ROUGE-L score
-    result = 0.0
-    if arr_results:
-        result = round(sum(arr_results) / len(arr_results), 4)
-    return result
+    print("Average ROUGE-L scores per label:")
+    for label in arr_labels:
+        print(f"{label}: {dict_results_avg[label]}")
+
+    # Return the overall average ROUGE-L scores
+    dict_results = {
+        metric: 0.0 for metric in arr_metrics
+    }
+    for metric in arr_metrics:
+        if arr_results[metric]:
+            dict_results[metric] = round(sum(arr_results[metric]) / len(arr_results[metric]), 4)
+    return dict_results
