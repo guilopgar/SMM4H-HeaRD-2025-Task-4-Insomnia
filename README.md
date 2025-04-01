@@ -34,7 +34,7 @@ The performance in this subtask is evaluated using the F1 score. The "yes" label
 The micro-average F1 score serves as the primary evaluation metric. The "yes" label is considered the positive class for each item in the Insomnia rules. 
 
 - **Subtask 2B: Evidence-Based Classification**  
-The alignment of text spans provided by participants with the reference spans from the clinical notes is assessed using BLEU and ROUGE metrics.
+The alignment of text spans provided by participants with the reference spans from the clinical notes is assessed using macro-average ROUGE-L scores.
 
 ## Annotations
 
